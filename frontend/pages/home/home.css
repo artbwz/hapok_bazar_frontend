@@ -1,37 +1,61 @@
 body {
     margin: 0;
+    padding: 0;
 }
 
 header{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     height: 120px;
     background-color: beige;
     margin: 0;
 }
 
-section:first-child{
+.top-section{
     background-color: #fff;
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
 }
 
-section:last-child{
+.bottom-section{
     height: 60px;
     background-color: rgba(68, 93, 34, 0.85)
 }
 
-.logo {
-    background-color: red;
+.logo img {
+    height: 48px;
+    margin: 6px 6px;
 }
 
 .title {
-    max-height: fit-content;
-    font-size: 24px;
     text-transform: uppercase;
     text-align: center;
 }
 
 .user {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.user-account {
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical-bar {
+    height: 48px;
+    width: 4px;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.user-logo img {
+    height: 48px;
+}
+
+.user-cart img {
+    height: 48px;
 }
