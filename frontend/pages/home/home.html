@@ -7,46 +7,126 @@
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
-
-    
-
-    <header>
+    <header class="site-header">
         <section class="top-section">
+            <a class="logo" href="#" aria-label="Ir para a pagina inicial">
+                <img src="../../assets/dragon.svg" alt="Logo da Hapok Bazar">
+            </a>
 
-            <div class="logo">
-                <img src="../../assets/dragon.svg" alt="">
+            <h1 class="title">Hapok Bazar</h1>
+
+            <div class="user-actions">
+                <a class="user-account" href="#" aria-label="Acessar conta">
+                    <img src="../../assets/user_logo.svg" alt="Icone de usuario">
+                    <span>Acessar conta</span>
+                </a>
+
+                <span class="vertical-bar" aria-hidden="true"></span>
+
+                <a class="user-cart" href="#" aria-label="Abrir carrinho">
+                    <img src="../../assets/cart.svg" alt="Icone do carrinho">
+                </a>
             </div>
-
-            <div class="title">
-                <h1>Hapok Bazar</h1>
-            </div>
-
-            <div class="user">
-                <div class="user-account">
-                    <div class="user-logo">
-                        <img src="../../assets/user_logo.svg" alt="">
-                    </div>
-
-                    <div class="sign-in">
-                        <p>
-                            Acessar conta
-                        </p>
-                    </div>
-                </div>
-
-                    <div class="vertical-bar">
-
-                    </div>
-                <div class="user-cart">
-                    <img src="../../assets/cart.svg" alt="">
-                </div>
-            </div>
-
         </section>
 
-        <section class="bottom-section"></section>
+        <section class="bottom-section">
+            <button class="menu-button" id="menuButton" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
+            <nav class="main-nav" id="mainNav" aria-label="Categorias principais">
+                <a href="#">Todas as categorias</a>
+                <a href="#">Mais vendidos</a>
+                <a href="#">Categorias</a>
+                <a href="#">Promocao</a>
+            </nav>
+
+            <form class="search-form" role="search" aria-label="Pesquisar produtos">
+                <label class="sr-only" for="searchInput">Buscar produtos</label>
+                <input id="searchInput" type="search" placeholder="" />
+                <button type="submit" aria-label="Buscar">
+                    <span class="search-icon" aria-hidden="true"></span>
+                </button>
+            </form>
+        </section>
     </header>
-    
+
+    <main>
+        <section class="products" aria-label="Lista de produtos">
+            <article class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <p>Produto 1</p>
+                    <strong>R$ 9,99</strong>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <p>Produto 1</p>
+                    <strong>R$ 9,99</strong>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <p>Produto 1</p>
+                    <strong>R$ 9,99</strong>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <p>Produto 1</p>
+                    <strong>R$ 9,99</strong>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <p>Produto 1</p>
+                    <strong>R$ 9,99</strong>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <p>Produto 1</p>
+                    <strong>R$ 9,99</strong>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <p>Produto 1</p>
+                    <strong>R$ 9,99</strong>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <p>Produto 1</p>
+                    <strong>R$ 9,99</strong>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h2>Hapok Bazar</h2>
+            <div class="footer-divider" aria-hidden="true"></div>
+            <nav class="footer-links" aria-label="Links do rodape">
+                <a href="#">Nossos Produtos</a>
+                <a href="../quem_somos/quem_somos.html">Veja aqui quem somos.</a>
+                <a href="../contato/contato.html">Fale Conosco</a>
+            </nav>
+        </div>
+        <p class="copyright">Todos os direitos reservados Hapok Bazar &copy; 2026.</p>
+    </footer>
+
+    <script src="home.js"></script>
 </body>
 </html>
