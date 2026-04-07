@@ -32,10 +32,6 @@ if (loginForm && feedbackLogin) {
             return;
         }
 
-        const mensagem = manterConectado
-            ? "Login realizado. Sessao sera mantida neste navegador."
-            : "Login realizado com sucesso!";
-
         showLoginFeedback(mensagem, "success");
         loginForm.reset();
     });
