@@ -1,33 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../styles.css" type="text/css">
-
-    <title>Hapok Bazar | Quem Somos</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quem Somos | Hapok Bazar</title>
+	<link rel="stylesheet" href="quem_somos.css">
 </head>
 <body>
-    <header>
-        <p>Em construção...</p>
-    </header>
-    <main>
-        <p>Em construção...</p>
-    </main>
-    <footer class="footerBar">
-        <div class="footerMain">
-            <p class="footerMain-title">Hapok Bazar</p>
-            <span class="footerLine">.</span>
-            <div class="footerLinks">
-                <a href="../home/home.html">Nossos Produtos</a>
-                <a href="../quem_somos/quem_somos.html">Veja aqui quem somos</a>
-                <a href="../contato/contato.html">Fale Conosco</a>
-            </div>
-        </div>
-        <p class="footerText">Todos os direitos resevados Hapok Bazar &copy; 2026.</p>
-    </footer>
+	<div class="page-label">QUEM_SOMOS</div>
+
+	<header class="site-header">
+		<section class="top-section">
+			<a class="logo" href="../home/home.html" aria-label="Ir para a pagina inicial">
+				<img src="../../assets/dragon.svg" alt="Logo da Hapok Bazar">
+			</a>
+
+			<h1 class="title">Hapok Bazar</h1>
+
+			<div class="user-actions">
+				<a class="user-account" href="../login/login.html" aria-label="Acessar conta">
+					<img src="../../assets/user_logo.svg" alt="Icone de usuario">
+					<span>Acessar conta</span>
+				</a>
+				<span class="vertical-bar" aria-hidden="true"></span>
+				<a class="user-cart" href="../confirmar_compra/confirmar_compra.html" aria-label="Abrir carrinho">
+					<img src="../../assets/cart.svg" alt="Icone do carrinho">
+				</a>
+			</div>
+		</section>
+
+		<section class="bottom-section">
+			<button class="menu-button" id="menuButton" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<nav class="main-nav" id="mainNav" aria-label="Categorias principais">
+				<a href="../home/home.html">Todas as categorias</a>
+				<a href="#">Mais vendidos</a>
+				<a href="#">Categorias</a>
+				<a href="#">Promocao</a>
+			</nav>
+
+			<form class="search-form" role="search" aria-label="Pesquisar produtos">
+				<label class="sr-only" for="searchInput">Buscar produtos</label>
+				<input id="searchInput" type="search">
+				<button type="submit" aria-label="Buscar">
+					<span class="search-icon" aria-hidden="true"></span>
+				</button>
+			</form>
+		</section>
+	</header>
+
+	<main class="content-area">
+		<section class="hero-card" aria-labelledby="quemTitulo">
+			<h2 id="quemTitulo">QUEM SOMOS ?</h2>
+			<p>
+				Somos uma empresa onde vendemos produtos como bijuterias, materiais
+				escolares, produtos de lazer, esportivos e entre outros para o mercado
+				brasileiro de boa qualidade, onde os consumidores que gostam de comprar
+				todos os tipos de produtos em um lugar so.
+			</p>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="footer-content">
+			<h2>Hapok Bazar</h2>
+			<div class="footer-divider" aria-hidden="true"></div>
+			<nav class="footer-links" aria-label="Links do rodape">
+				<a href="#">Nossos Produtos</a>
+				<a href="../quem_somos/quem_somos.html">Veja aqui quem somos.</a>
+				<a href="../contato/contato.html">Fale Conosco</a>
+			</nav>
+		</div>
+		<p class="copyright">Todos os direitos reservados Hapok Bazar &copy; 2026.</p>
+	</footer>
+
+	<script src="quem_somos.js"></script>
 </body>
 </html>

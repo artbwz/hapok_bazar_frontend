@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Compra | Hapok Bazar</title>
+    <link rel="stylesheet" href="confirmar_compra.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="../home/home.html">Hapok Bazar</a>
+        <nav class="topbar-nav" aria-label="Navegacao principal">
+            <a href="../login/login.html">Login</a>
+            <a href="../cadastro/cadastro.html">Cadastro</a>
+        </nav>
+    </header>
+
+    <main class="checkout-main">
+        <section class="cart-panel" aria-labelledby="cartTitulo">
+            <h1 id="cartTitulo">Confirmar compras</h1>
+            <p>Revise os itens e finalize seu pedido.</p>
+
+            <div class="cart-items" id="cartItems">
+                <article class="cart-item" data-price="89.9">
+                    <div>
+                        <h2>Camiseta Geek</h2>
+                        <p>R$ 59,90</p>
+                    </div>
+                    <div class="qty-control">
+                        <button class="qty-btn" data-action="decrease" type="button">-</button>
+                        <span class="qty-value">1</span>
+                        <button class="qty-btn" data-action="increase" type="button">+</button>
+                    </div>
+                </article>
+
+                <article class="cart-item" data-price="34.5">
+                    <div>
+                        <h2>Caneca Dragon Ball Z</h2>
+                        <p>R$ 14,50</p>
+                    </div>
+                    <div class="qty-control">
+                        <button class="qty-btn" data-action="decrease" type="button">-</button>
+                        <span class="qty-value">2</span>
+                        <button class="qty-btn" data-action="increase" type="button">+</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <aside class="summary-panel" aria-labelledby="resumoTitulo">
+            <h2 id="resumoTitulo">Resumo do pedido</h2>
+
+            <form id="checkoutForm" novalidate>
+                <div class="input-group">
+                    <label for="endereco">Endereco de entrega</label>
+                    <input type="text" id="endereco" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="pagamento">Forma de pagamento</label>
+                    <select id="pagamento" required>
+                        <option value="">Selecione</option>
+                        <option value="cartao">Cartao de credito</option>
+                        <option value="pix">Pix</option>
+                        <option value="boleto">Boleto</option>
+                    </select>
+                </div>
+
+                <div class="line-total">
+                    <span>Subtotal</span>
+                    <strong id="subtotal">R$ 0,00</strong>
+                </div>
+                <div class="line-total">
+                    <span>Frete</span>
+                    <strong id="frete">R$ 12,00</strong>
+                </div>
+                <div class="line-total final">
+                    <span>Total</span>
+                    <strong id="total">R$ 0,00</strong>
+                </div>
+
+                <button type="submit" class="btn-primary">Confirmar compra</button>
+                <p class="feedback" id="feedbackCheckout" aria-live="polite"></p>
+            </form>
+        </aside>
+    </main>
+
+    <script src="confirmar_compra.js"></script>
+</body>
+</html>
