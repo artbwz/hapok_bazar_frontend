@@ -2,6 +2,7 @@ const menuButton = document.getElementById("menuButton");
 const mainNav = document.getElementById("mainNav");
 const buttonLogin = document.querySelector(".buttonLogin");
 const openCarrinho = document.querySelector(".openCarrinho");
+const productCards = document.querySelectorAll(".product-card");
 
 openCarrinho.addEventListener("click", () => {
   window.location.href = "frontend/pages/confirmar_compra/confirmar_compra.html";
