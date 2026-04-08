@@ -1,6 +1,11 @@
 const menuButton = document.getElementById("menuButton");
 const mainNav = document.getElementById("mainNav");
 const buttonLogin = document.querySelector(".buttonLogin");
+const openCarrinho = document.querySelector(".openCarrinho");
+
+openCarrinho.addEventListener("click", () => {
+  window.location.href = "../confirmar_compra/confirmar_compra.html";
+});
 
 buttonLogin.addEventListener("click", () => {
   window.location.href = "../login/login.html";
