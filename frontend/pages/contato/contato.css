@@ -177,6 +177,7 @@ a {
 }
 
 .content-area {
+  height: 512px;
   min-height: 430px;
   padding: 44px 24px 36px;
   display: flex;
