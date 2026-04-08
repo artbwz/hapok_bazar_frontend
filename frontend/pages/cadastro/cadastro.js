@@ -1,6 +1,11 @@
 const cadastroForm = document.getElementById("cadastroForm");
 const feedbackCadastro = document.getElementById("feedbackCadastro");
 
+const nomeRegex = /^[A-Za-z\u00C0-\u017F]+(?:\s+[A-Za-z\u00C0-\u017F]+)+$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const telefoneRegex = /^\d{10,11}$/;
+const senhaRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
+
 function setFeedback(message, type) {
     feedbackCadastro.textContent = message;
     feedbackCadastro.classList.remove("error", "success");
@@ -15,7 +20,8 @@ if (cadastroForm && feedbackCadastro) {
 
         const nome = document.getElementById("nome").value.trim();
         const email = document.getElementById("email").value.trim();
-        const telefone = document.getElementById("telefone").value.trim();
+        const telefoneInput = document.getElementById("telefone").value.trim();
+        const telefone = telefoneInput.replace(/\D/g, "");
         const senha = document.getElementById("senha").value;
         const confirmarSenha = document.getElementById("confirmarSenha").value;
         const termosAceitos = document.getElementById("termos").checked;
@@ -25,13 +31,23 @@ if (cadastroForm && feedbackCadastro) {
             return;
         }
 
-        if (!email.includes("@") || !email.includes(".")) {
+        if (!nomeRegex.test(nome)) {
+            setFeedback("Digite nome e sobrenome validos.", "error");
+            return;
+        }
+
+        if (!emailRegex.test(email)) {
             setFeedback("Digite um e-mail valido.", "error");
             return;
         }
 
-        if (senha.length < 6) {
-            setFeedback("A senha precisa ter pelo menos 6 caracteres.", "error");
+        if (!telefoneRegex.test(telefone)) {
+            setFeedback("Digite um telefone valido com DDD.", "error");
+            return;
+        }
+
+        if (!senhaRegex.test(senha)) {
+            setFeedback("A senha deve ter 6+ caracteres, com maiuscula, minuscula e numero.", "error");
             return;
         }
 
