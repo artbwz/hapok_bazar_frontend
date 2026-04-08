@@ -15,7 +15,6 @@ if (loginForm && feedbackLogin) {
 
         const email = document.getElementById("loginEmail").value.trim();
         const senha = document.getElementById("loginSenha").value;
-        const manterConectado = document.getElementById("manterConectado").checked;
 
         if (!email || !senha) {
             showLoginFeedback("Preencha e-mail e senha.", "error");
