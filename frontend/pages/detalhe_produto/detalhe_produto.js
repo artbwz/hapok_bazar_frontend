@@ -4,6 +4,9 @@ const qtyValue = document.getElementById("qtyValue");
 const decreaseQty = document.getElementById("decreaseQty");
 const increaseQty = document.getElementById("increaseQty");
 const valueText = document.querySelector(".value");
+const addCartBtn = document.querySelector(".add-cart");
+const cartModal = document.getElementById("cartModal");
+const closeModal = document.getElementById("closeModal");
 
 const unitPrice = 9.99;
 
@@ -45,5 +48,24 @@ if (qtyValue && decreaseQty && increaseQty) {
         const current = Number(qtyValue.textContent);
         qtyValue.textContent = String(current + 1);
         updateTotalValue();
+    });
+}
+
+if (addCartBtn && cartModal && closeModal) {
+    addCartBtn.addEventListener("click", () => {
+        cartModal.classList.add("show");
+        setTimeout(() => {
+            cartModal.classList.remove("show");
+        }, 3000);
+    });
+
+    closeModal.addEventListener("click", () => {
+        cartModal.classList.remove("show");
+    });
+
+    cartModal.addEventListener("click", (event) => {
+        if (event.target === cartModal) {
+            cartModal.classList.remove("show");
+        }
     });
 }

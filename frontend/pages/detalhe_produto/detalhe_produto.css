@@ -328,6 +328,71 @@ a {
   margin: 6px 0 0;
 }
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-overlay.show {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  max-width: 340px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+  color: #999;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+.modal-icon {
+  font-size: 3.2rem;
+  color: #0f8e31;
+  margin-bottom: 12px;
+}
+
+.modal-content h3 {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+  color: #191a23;
+}
+
+.modal-content p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #666;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
