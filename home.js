@@ -23,7 +23,7 @@ if (menuButton && mainNav) {
 if (productCards.length > 0) {
   productCards.forEach((card) => {
     card.addEventListener("click", () => {
-      window.location.href = "../detalhe_produto/detalhe_produto.html";
+      window.location.href = "frontend/pages/detalhe_produto/detalhe_produto.html";
     });
   });
 }
