@@ -171,9 +171,16 @@ a {
 
 main {
   padding: 42px 38px 36px;
+  max-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .products {
+  max-width: 1300px;
+  overflow-y: scroll;
+  max-height: 500px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -321,15 +328,12 @@ main {
     padding-inline: 16px;
   }
 
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
+  .products {
+    height: 400px;
   }
 
-  .footer-divider {
-    width: 120px;
-    height: 4px;
+  footer {
+    min-height: 280px;
   }
 
   .menu-button {
