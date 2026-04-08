@@ -18,3 +18,11 @@ if (menuButton && mainNav) {
     mainNav.classList.toggle("is-open");
   });
 }
+
+if (productCards.length > 0) {
+  productCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      window.location.href = "../detalhe_produto/detalhe_produto.html";
+    });
+  });
+}
