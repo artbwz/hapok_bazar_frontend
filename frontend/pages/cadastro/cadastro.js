@@ -41,6 +41,11 @@ if (cadastroForm && feedbackCadastro) {
             return;
         }
 
+        if (/[a-zA-Z]/.test(telefoneInput)) {
+            setFeedback("O telefone nao pode conter letras. Apenas numeros.", "error");
+            return;
+        }
+
         if (!telefoneRegex.test(telefone)) {
             setFeedback("Digite um telefone valido com DDD.", "error");
             return;
