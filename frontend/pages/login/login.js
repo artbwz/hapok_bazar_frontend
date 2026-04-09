@@ -31,7 +31,7 @@ if (loginForm && feedbackLogin) {
             return;
         }
 
-        showLoginFeedback(mensagem, "success");
+        showLoginFeedback("Login realizado com sucesso.", "success");
         loginForm.reset();
     });
 }
