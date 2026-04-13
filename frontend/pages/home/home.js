@@ -3,6 +3,21 @@ const mainNav = document.getElementById("mainNav");
 const buttonLogin = document.querySelector(".buttonLogin");
 const openCarrinho = document.querySelector(".openCarrinho");
 const productCards = document.querySelectorAll(".product-card");
+const selectedCategory = localStorage.getItem("selectedCategory");
+
+if (selectedCategory) {
+  productCards.forEach((card) => {
+    const cardCategory = card.dataset.category;
+
+    if (selectedCategory === "all" || cardCategory === selectedCategory) {
+      card.style.display = "flex";
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+  localStorage.removeItem("selectedCategory");
+}
 
 openCarrinho.addEventListener("click", () => {
   window.location.href = "../confirmar_compra/confirmar_compra.html";
