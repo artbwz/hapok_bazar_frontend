@@ -5,11 +5,11 @@ const openCarrinho = document.querySelector(".openCarrinho");
 const productCards = document.querySelectorAll(".product-card");
 
 openCarrinho.addEventListener("click", () => {
-  window.location.href = "frontend/pages/confirmar_compra/confirmar_compra.html";
+  window.location.href = "../confirmar_compra/confirmar_compra.html";
 });
 
 buttonLogin.addEventListener("click", () => {
-  window.location.href = "frontend/pages/login/login.html";
+  window.location.href = "../login/login.html";
 });
 
 if (menuButton && mainNav) {
@@ -23,7 +23,8 @@ if (menuButton && mainNav) {
 if (productCards.length > 0) {
   productCards.forEach((card) => {
     card.addEventListener("click", () => {
-      window.location.href = "frontend/pages/detalhe_produto/detalhe_produto.html";
+      window.location.href =
+        "frontend/pages/detalhe_produto/detalhe_produto.html";
     });
   });
 }
