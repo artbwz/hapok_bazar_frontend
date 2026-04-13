@@ -51,7 +51,17 @@
         <nav class="main-nav" id="mainNav" aria-label="Categorias principais">
           <a href="#">Todos os produtos</a>
           <a href="#">Mais vendidos</a>
-          <a href="#">Categorias</a>
+          <div class="nav-item categorias">
+            <span class="categorias-btn">Categorias</span>
+
+            <div class="categorias-dropdown">
+              <a href="#" data-category="all">Todos</a>
+              <a href="#" data-category="acessorios">Acessórios</a>
+              <a href="#" data-category="casa">Casa</a>
+              <a href="#" data-category="eletronico">Eletrônicos</a>
+              <a href="#" data-category="papelaria">Papelaria</a>
+            </div>
+          </div>
           <a href="#">Promoção</a>
         </nav>
 
@@ -72,6 +82,7 @@
           data-name="Colar Artesanal"
           data-price="19.99"
           data-image="../../assets/colar artesanal.jpg"
+          data-category="acessorios"
         >
           <div class="product-image">
             <img
@@ -90,6 +101,7 @@
           data-name="Colar Pedra Azul"
           data-price="25.99"
           data-image="../../assets/colar pedra azul.jpg"
+          data-category="acessorios"
         >
           <div class="product-image">
             <img
@@ -108,6 +120,7 @@
           data-name="Kit Vassoura"
           data-price="59.99"
           data-image="../../assets/kit vassoura.png"
+          data-category="casa"
         >
           <div class="product-image">
             <img src="../../assets/kit vassoura.png" alt="Kit Vassoura" />
@@ -123,6 +136,7 @@
           data-name="Mop"
           data-price="39.99"
           data-image="../../assets/mop.jpg"
+          data-category="casa"
         >
           <div class="product-image">
             <img src="../../assets/mop.jpg" alt="Mop para Limpeza" />
@@ -138,6 +152,7 @@
           data-name="Capa Personalizada"
           data-price="29.99"
           data-image="../../assets/capa-personalizada.jpg"
+          data-category="eletronico"
         >
           <div class="product-image">
             <img
@@ -156,6 +171,7 @@
           data-name="Kit Caneta"
           data-price="9.99"
           data-image="../../assets/kit caneta.jpg"
+          data-category="papelaria"
         >
           <div class="product-image">
             <img src="../../assets/kit caneta.jpg" alt="Kit com 3 Canetas" />
@@ -171,6 +187,7 @@
           data-name="Tripé - Celular"
           data-price="99.99"
           data-image="../../assets/tripe celular.jpg"
+          data-category="eletronico"
         >
           <div class="product-image">
             <img src="../../assets/tripe celular.jpg" alt="Tripe Celular" />
@@ -186,6 +203,7 @@
           data-name="Calendário 2026"
           data-price="9.99"
           data-image="../../assets/calendario.png"
+          data-category="papelaria"
         >
           <div class="product-image">
             <img src="../../assets/calendario.png" alt="Calendário 2026" />
@@ -216,5 +234,6 @@
 
     <script src="home.js"></script>
     <script src="../../search.js"></script>
+    <script src="../../category.js"></script>
   </body>
 </html>
