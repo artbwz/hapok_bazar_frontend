@@ -60,7 +60,7 @@
         </nav>
 
         <form class="search-form" role="search" aria-label="Pesquisar produtos">
-          <label class="sr-only" for="searchInput">Buscar produtos</label>
+          <label class="sr-only" for="searchInput"></label>
           <input id="searchInput" type="search" />
           <button type="submit" aria-label="Buscar">
             <span class="search-icon" aria-hidden="true"></span>
@@ -74,7 +74,9 @@
 
       <section class="product-layout" aria-label="Detalhes do produto">
         <article class="gallery-block">
-          <div class="main-photo"></div>
+          <div class="main-photo">
+            <img src="../../assets/colar artesanal.jpg" alt="Produto" />
+          </div>
           <p class="name-price">Produto 1<br />R$ 9,99</p>
           <p class="description">
             Descricao: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -105,7 +107,14 @@
 
     <div id="cartModal" class="modal-overlay">
       <div class="modal-content">
-        <button type="button" id="closeModal" class="modal-close" aria-label="Fechar">×</button>
+        <button
+          type="button"
+          id="closeModal"
+          class="modal-close"
+          aria-label="Fechar"
+        >
+          ×
+        </button>
         <div class="modal-icon">✓</div>
         <h3>Produto adicionado ao carrinho!</h3>
         <p>Seu item foi adicionado com sucesso.</p>
