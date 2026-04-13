@@ -252,22 +252,110 @@ main {
   width: min(860px, 100%);
   background: var(--primary);
   border-radius: 10px;
-  padding: 28px 28px 38px;
-  text-align: center;
+  padding: 28px;
   box-shadow: 0 10px 14px rgba(0, 0, 0, 0.22);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
 }
 
-.hero-card h2 {
+.contact-intro {
+  text-align: left;
+}
+
+.contact-intro h2 {
   margin: 0 0 18px;
   font-size: 2.2rem;
   letter-spacing: 3px;
 }
 
-.hero-card p {
-  margin: 0 auto;
-  max-width: 700px;
-  font-size: 1.9rem;
-  line-height: 1.25;
+.contact-intro p {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.field-group {
+  display: grid;
+  gap: 8px;
+}
+
+.field-group label {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.field-group input,
+.field-group textarea {
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--text);
+  font: inherit;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.field-group textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.field-group input:focus,
+.field-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.18);
+}
+
+.field-group input.is-invalid,
+.field-group textarea.is-invalid {
+  border-color: #dc3545;
+}
+
+.field-group input.is-valid,
+.field-group textarea.is-valid {
+  border-color: #1f7a45;
+}
+
+.field-error {
+  min-height: 1.1em;
+  font-size: 0.92rem;
+  color: #3a0d12;
+}
+
+.submit-button {
+  border: 0;
+  border-radius: 999px;
+  background: #1f2432;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  padding: 13px 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.submit-button:hover {
+  background: #111622;
+  transform: translateY(-1px);
+}
+
+.submit-button:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.35);
+  outline-offset: 2px;
 }
 
 .site-footer {
@@ -319,6 +407,10 @@ main {
 }
 
 @media (max-width: 768px) {
+  .hero-card {
+    grid-template-columns: 1fr;
+  }
+
   .products {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -339,6 +431,18 @@ main {
 }
 
 @media (max-width: 480px) {
+  .hero-card {
+    padding: 20px;
+  }
+
+  .contact-intro h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-intro p {
+    font-size: 1.05rem;
+  }
+
   .products {
     grid-template-columns: 1fr;
   }

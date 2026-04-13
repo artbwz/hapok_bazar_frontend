@@ -9,7 +9,7 @@ openCarrinho.addEventListener("click", () => {
 });
 
 buttonLogin.addEventListener("click", () => {
-  window.location.href = "../login/login.html";
+  window.location.href = "../frontend/pages/login/login.html";
 });
 
 if (menuButton && mainNav) {

@@ -83,10 +83,59 @@
 
     <main class="content-area">
       <section class="hero-card" aria-labelledby="contatoTitulo">
-        <h2 id="contatoTitulo">FALE CONOSCO !</h2>
-        <p>Email: hapok_bazar@gmail.com</p>
-        <p>Telefone (Whatsapp): (21) 9 9999-2996</p>
-        <p>Endereco: Rua Senhor dos Passos, 178 - Centro, Rio de Janeiro</p>
+        <div class="contact-intro">
+          <h2 id="contatoTitulo">FALE CONOSCO</h2>
+          <p>Email: hapok_bazar@gmail.com</p>
+          <p>Telefone (Whatsapp): (21) 9 9999-2996</p>
+          <p>Endereco: Rua Senhor dos Passos, 178 - Centro, Rio de Janeiro</p>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field-group">
+            <label for="name">Nome</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              minlength="3"
+              required
+              autocomplete="name"
+              placeholder="Seu nome completo"
+            />
+            <span class="field-error" id="nameError" aria-live="polite"></span>
+          </div>
+
+          <div class="field-group">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              minlength="5"
+              required
+              autocomplete="email"
+              placeholder="voce@exemplo.com"
+              pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+              title="Digite um email valido"
+            />
+            <span class="field-error" id="emailError" aria-live="polite"></span>
+          </div>
+
+          <div class="field-group">
+            <label for="message">Mensagem</label>
+            <textarea
+              id="message"
+              name="message"
+              minlength="3"
+              required
+              placeholder="Escreva sua mensagem"
+              rows="5"
+            ></textarea>
+            <span class="field-error" id="messageError" aria-live="polite"></span>
+          </div>
+
+          <button class="submit-button" type="submit">Enviar</button>
+        </form>
       </section>
     </main>
 
