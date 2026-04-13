@@ -3,6 +3,18 @@ const mainNav = document.getElementById("mainNav");
 const buttonLogin = document.querySelector(".buttonLogin");
 const openCarrinho = document.querySelector(".openCarrinho");
 const productCards = document.querySelectorAll(".product-card");
+const categoryLink = document.querySelectorAll(".categorias-dropdown a");
+
+categoryLink.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const category = link.dataset.category;
+    localStorage.setItem("selectedCategory", category);
+
+    window.location.href = "/frontend/pages/home/index.html";
+  });
+});
 
 openCarrinho.addEventListener("click", () => {
   window.location.href = "../confirmar_compra/confirmar_compra.html";
