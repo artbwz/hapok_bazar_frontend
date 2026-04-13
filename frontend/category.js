@@ -6,5 +6,7 @@ categoryLinks.forEach((link) => {
 
     const category = link.dataset.category;
     localStorage.setItem("selectedCategory", category);
+
+    window.location.href = "../home/index.html";
   });
 });
