@@ -46,8 +46,10 @@ a {
 }
 
 .title {
+  color: #333333;
   margin: 0;
   text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   letter-spacing: 3px;
   font-size: 2rem;
   font-weight: 800;
@@ -123,7 +125,13 @@ a {
 }
 
 .main-nav a {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: 1.35rem;
+}
+
+.main-nav a:hover {
+  color: #ccc;
+  font-size: 1.4rem;
 }
 
 .search-form {
@@ -252,6 +260,10 @@ main {
   gap: 8px;
   font-size: 1.6rem;
   font-weight: 700;
+}
+
+.footer-links a:hover {
+  color: #ccc;
 }
 
 .copyright {
