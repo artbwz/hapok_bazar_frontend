@@ -12,7 +12,8 @@ categoryLink.forEach((link) => {
     const category = link.dataset.category;
     localStorage.setItem("selectedCategory", category);
 
-    window.location.href = "/frontend/pages/home/index.html";
+    window.location.href =
+      "../hapok_bazar_frontend/frontend/pages/home/index.html";
   });
 });
 
