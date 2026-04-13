@@ -23,6 +23,14 @@ if (menuButton && mainNav) {
 if (productCards.length > 0) {
   productCards.forEach((card) => {
     card.addEventListener("click", () => {
+      const product = {
+        name: card.dataset.name,
+        price: card.dataset.price,
+        image: card.dataset.image,
+      };
+
+      localStorage.setItem("selectedProduct", JSON.stringify(product));
+
       window.location.href =
         "frontend/pages/detalhe_produto/detalhe_produto.html";
     });
