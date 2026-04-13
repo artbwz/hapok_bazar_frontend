@@ -4,6 +4,16 @@ const buttonLogin = document.querySelector(".buttonLogin");
 const openCarrinho = document.querySelector(".openCarrinho");
 const productCards = document.querySelectorAll(".product-card");
 const selectedCategory = localStorage.getItem("selectedCategory");
+const allProducts = document.querySelector(".allProducts");
+
+allProducts.addEventListener("click", (e) => {
+  e.preventDefault();
+  productCards.forEach((card) => {
+    card.style.display = "flex";
+  });
+
+  localStorage.removeItem("selectedCategory");
+});
 
 if (selectedCategory) {
   productCards.forEach((card) => {
