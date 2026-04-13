@@ -3,6 +3,7 @@ const mainNav = document.getElementById("mainNav");
 const buttonLogin = document.querySelector(".buttonLogin");
 const openCarrinho = document.querySelector(".openCarrinho");
 const contactForm = document.getElementById("contactForm");
+const formFeedback = document.getElementById("formFeedback");
 
 const contactFields = [
   {
@@ -86,21 +87,38 @@ if (menuButton && mainNav) {
 if (contactForm) {
   contactForm.addEventListener("submit", (event) => {
     let formIsValid = true;
+    let hasRequiredMissing = false;
 
     contactFields.forEach((field) => {
       updateFieldState(field);
       if (field.input && !field.input.checkValidity()) {
         formIsValid = false;
+        if (field.input.validity.valueMissing) {
+          hasRequiredMissing = true;
+        }
       }
     });
 
     if (!formIsValid) {
       event.preventDefault();
+
+      if (formFeedback) {
+        if (hasRequiredMissing) {
+          formFeedback.textContent = "Preencha todos os campos obrigatorios.";
+        } else {
+          formFeedback.textContent = "";
+        }
+      }
+
       return;
     }
 
     event.preventDefault();
     contactForm.reset();
+
+    if (formFeedback) {
+      formFeedback.textContent = "";
+    }
 
     contactFields.forEach((field) => {
       if (!field.input || !field.error) {
